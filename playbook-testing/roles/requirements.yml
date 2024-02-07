@@ -1,4 +1,0 @@
----
-- src: https://github.com/OravlaZinum/ansible-roles.git
-  name: ping
-  scm: git
