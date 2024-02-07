@@ -1,4 +1,4 @@
 ---
-- src: k8s-masvoz-sa@bitbucket.voiceworks.com/scm/bar:ansible-roles.git
-  name: ping-test
+- src: https://github.com/OravlaZinum/ansible-roles.git
+  name: ping
   scm: git
