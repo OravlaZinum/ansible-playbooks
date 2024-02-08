@@ -4,7 +4,17 @@
   tasks:
     - name: detect roles/requirements.(yml/yaml)
       stat:
-        path: "/var/lib/awx/projects//playbook-testing/_12__test_playbook/roles/requirements.yml"
+        path: "/var/lib/awx/projects/playbook-testing/_12__test_playbook/roles/requirements.yml"
       with_items: "Ok"
       register: doesRequirementsExist
+      
+    - name: fetch galaxy roles from requirements.(yml/yaml)
+      command: >
+        ansible-galaxy install -r /var/lib/awx/projects/playbook-testing/_12__test_playbook/roles/requirements.yml
+      register: galaxy_result
+      with_items: "{{ doesRequirementsExist.results }}"
+      when: item.stat.exists
+      changed_when: "'was installed successfully' in galaxy_result.stdout"
 
+
+ 
