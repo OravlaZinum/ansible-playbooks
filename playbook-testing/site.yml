@@ -4,4 +4,4 @@
   become_user: alvaro
 
   roles:
-    - /roles/ping
+    - /ping
