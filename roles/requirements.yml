@@ -3,6 +3,6 @@
   name: ping
   scm: git
 
-- src: https://github.com/OravlaZinum/ansible-roles.git
+- src: https://github.com/OravlaZinum/ansible-touch.git
   name: touch
   scm: git
