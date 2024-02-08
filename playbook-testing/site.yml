@@ -2,10 +2,7 @@
 - hosts: all
   become: yes
   become_user: alvaro
-
-  roles:
-    - ping
-    
+  
   tasks:
     - name: detect roles/requirements.(yml/yaml)
       stat:
