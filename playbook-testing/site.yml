@@ -5,3 +5,11 @@
 
   roles:
     - ping
+    
+  tasks:
+    - name: detect roles/requirements.(yml/yaml)
+      stat:
+        path: "{{project_path|quote}}/playbook-testing/roles/requirements.yml"
+      with_items: "{{ yaml_exts }}"
+      register: doesRequirementsExist
+
