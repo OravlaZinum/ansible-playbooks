@@ -1,5 +1,4 @@
 ---
 - src: https://github.com/OravlaZinum/ansible-roles.git
   name: ansible-roles
-  version: master
   scm: git
