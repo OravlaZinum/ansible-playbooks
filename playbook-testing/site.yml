@@ -4,7 +4,7 @@
   tasks:
     - name: detect roles/requirements.(yml/yaml)
       stat:
-        path: "{{project_path|quote}}/playbook-testing/roles/requirements.yml"
+        path: "/var/lib/awx/projects//playbook-testing/_12__test_playbook/roles/requirements.yml"
       with_items: "Ok"
       register: doesRequirementsExist
 
