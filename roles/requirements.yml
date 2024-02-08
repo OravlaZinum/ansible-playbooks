@@ -1,4 +1,3 @@
 ---
 - src: git+https://github.com/OravlaZinum/ansible-roles.git
-  name: roles
   type: git
